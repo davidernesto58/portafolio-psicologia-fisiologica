@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio académico de Psicología Fisiológica">
+<title>Psicología Fisiológica | David Ernesto González Tovar</title>
+<style>
+:root{--navy:#172c46;--blue:#315b7d;--cream:#f6f3ed;--paper:#fff;--ink:#243244;--muted:#687789;--gold:#c6a66b;--line:#dce3e9;--pale:#eaf0f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Inter,Segoe UI,Arial,sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(23,44,70,.97);color:#fff;box-shadow:0 4px 18px #13263b25}
+.nav{max-width:1160px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:Georgia,serif;font-size:19px;letter-spacing:.04em}.navlinks{display:flex;gap:8px;flex-wrap:wrap}
+.navlinks a{color:#e9eef3;text-decoration:none;font-size:13px;padding:7px 10px;border-radius:20px}.navlinks a:hover,.navlinks a.active{background:#ffffff20;color:#fff}
+.menu{display:none;background:none;color:white;border:1px solid #ffffff55;border-radius:8px;padding:7px 10px}
+.hero{background:linear-gradient(125deg,#14283f 0%,#254d6c 70%,#456d83 100%);color:white;padding:74px 22px 66px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #ffffff25;border-radius:50%;right:-90px;top:-125px;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff06}
+.hero-inner{max-width:1080px;margin:auto;position:relative;z-index:1}
+.eyebrow{color:#e3c991;text-transform:uppercase;letter-spacing:.19em;font-size:12px;font-weight:700}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2}h1{font-size:clamp(40px,7vw,70px);font-weight:500;max-width:760px;margin:16px 0}
+.hero p{max-width:650px;color:#e0e8ee;font-size:18px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:34px;color:#d4dee6;font-size:13px}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+.intro{padding:48px 0 22px}.intro h2{font-size:32px;color:var(--navy);margin:0 0 12px}.intro p{color:var(--muted);max-width:760px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 0 56px}
+.card{background:white;border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:0 8px 25px #1b344b08;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #1b344b13}
+.card .num{font:30px Georgia;color:var(--gold)}.card h3{font-size:19px;color:var(--navy);margin:8px 0}.card p{font-size:13px;color:var(--muted);margin:0}
+section.content{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
+.kicker{color:#9a7840;font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+h2.section-title{font-size:clamp(30px,4vw,43px);color:var(--navy);margin:8px 0 12px}
+.lead{font-size:17px;color:var(--muted);max-width:800px;margin:0 0 30px}
+h3{color:var(--navy);font-size:23px;margin:30px 0 12px}
+p{margin:0 0 14px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0}
+.panel h3{margin:0 0 10px;font-size:20px}.tag{display:inline-block;background:var(--pale);color:var(--blue);border-radius:20px;padding:4px 10px;font-size:12px;margin:3px 4px 3px 0}
+.timeline{position:relative;margin:30px 0 10px;padding-left:27px;border-left:2px solid #c6a66b}
+.event{position:relative;padding:0 0 26px 18px}.event:before{content:"";position:absolute;left:-35px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--cream)}
+.event strong{color:var(--navy);font-size:18px}.event .year{font-weight:700;color:#98743b;margin-right:9px}
+.compare{width:100%;border-collapse:collapse;margin:16px 0;background:white;border-radius:12px;overflow:hidden}
+.compare th,.compare td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}
+.compare th{background:var(--navy);color:white;font-size:13px}.compare td{font-size:14px}
+.callout{border-left:4px solid var(--gold);background:#f1ede4;padding:17px 20px;border-radius:0 10px 10px 0;margin:22px 0}
+.diagram{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:20px;margin:20px 0}
+.membrane{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0}
+.ion{padding:9px 13px;border-radius:50%;background:#dceaf5;color:#244c6d;font-weight:700}.membrane-line{height:9px;width:100%;max-width:340px;background:linear-gradient(#c6a66b 0 40%,#f1dfbd 40% 60%,#c6a66b 60%);border-radius:9px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.step b{color:var(--blue)}
+.term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.term{background:white;border:1px solid var(--line);border-radius:12px;padding:17px}.term h4{margin:0 0 5px;color:var(--navy);font-size:17px}.term p{font-size:14px;color:#566577;margin:0}
+.axis{background:#eaf0f5;border-radius:12px;padding:18px;text-align:center;margin:18px 0}.axis svg{max-width:100%;height:auto}
+.essay{background:white;border:1px solid var(--line);border-radius:14px;padding:clamp(20px,4vw,38px);max-width:850px}.essay h3{margin-top:24px}
+.refs{font-size:14px;color:#536274}.refs li{margin:0 0 10px;overflow-wrap:anywhere}
+footer{background:var(--navy);color:#dbe4ec;padding:34px 22px;text-align:center;font-size:13px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.btn{border:0;border-radius:24px;padding:11px 18px;background:var(--gold);color:#1d2c3b;font-weight:700;text-decoration:none;cursor:pointer}.btn.secondary{background:transparent;border:1px solid #b8c6d2;color:var(--navy)}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:57px;left:0;right:0;background:var(--navy);padding:12px 20px 18px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.grid2{grid-template-columns:1fr}}
+@media(max-width:560px){.cards,.term-grid,.steps{grid-template-columns:1fr}.hero{padding:55px 0}.hero-meta{gap:10px}.brand{font-size:16px}.compare{font-size:12px}.compare th,.compare td{padding:9px}}
+@media print{header,.actions,.menu{display:none!important}body{background:white;font-size:11pt}.hero{padding:35px 20px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.wrap{max-width:none}.content{padding:30px 0!important;break-before:page}.card,.panel,.term,.essay{break-inside:avoid;box-shadow:none}.cards{grid-template-columns:repeat(2,1fr)}a{color:inherit;text-decoration:none}.hero:after{display:none}footer{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+<div class="brand">PSICOLOGÍA FISIOLÓGICA</div>
+<button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+<div class="navlinks" id="navlinks">
+<a href="#inicio">Inicio</a><a href="#actividad1">Actividad 1</a><a href="#actividad2">Actividad 2</a><a href="#actividad3">Actividad 3</a><a href="#actividad4">Actividad 4</a><a href="#referencias">Referencias</a>
+</div></nav></header>
+<main id="inicio">
+<section class="hero"><div class="hero-inner">
+<div class="eyebrow">Portafolio académico · 2026</div>
+<h1>El cerebro, el cuerpo y la conducta</h1>
+<p>Un recorrido por los fundamentos históricos, físico-químicos, anatómicos y neuroquímicos que permiten comprender la relación entre el sistema nervioso y el comportamiento humano.</p>
+<div class="hero-meta"><span>Asignatura: Psicología Fisiológica</span><span>Docente: Mtra. María Atzimba Aguilar Martínez</span><span>Estudiante: David Ernesto González Tovar</span></div>
+<div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar como PDF</button><a class="btn secondary" href="#actividad1">Explorar actividades ↓</a></div>
+</div></section>
+<div class="wrap">
+<div class="intro"><div class="kicker">Contenido del portafolio</div><h2>Cuatro perspectivas, un mismo sistema</h2><p>Las actividades están organizadas de acuerdo con las unidades y los productos solicitados en la evaluación final. Cada apartado integra conceptos, ejemplos y recursos visuales para facilitar el aprendizaje.</p></div>
+<div class="cards">
+<a class="card" href="#actividad1" style="text-decoration:none"><div class="num">01</div><h3>Historia y métodos</h3><p>Línea del tiempo y comparación de técnicas psicofisiológicas.</p></a>
+<a class="card" href="#actividad2" style="text-decoration:none"><div class="num">02</div><h3>Bases físico-químicas</h3><p>Compuestos orgánicos, bioquímica y potencial de membrana.</p></a>
+<a class="card" href="#actividad3" style="text-decoration:none"><div class="num">03</div><h3>Neuroanatomía básica</h3><p>Glosario ilustrado de términos topográficos y planos.</p></a>
+<a class="card" href="#actividad4" style="text-decoration:none"><div class="num">04</div><h3>Neuroquímica</h3><p>Ensayo reflexivo sobre neurotransmisores y homeostasis.</p></a>
+</div>
+</div>
+
+<section class="content" id="actividad1"><div class="wrap">
+<div class="kicker">Actividad 1 · 25%</div><h2 class="section-title">Línea del tiempo: historia y métodos psicofisiológicos</h2>
+<p class="lead">La psicofisiología estudia las relaciones entre los procesos fisiológicos —especialmente los del sistema nervioso— y la conducta, la cognición y las emociones. Su desarrollo combina la medición de la experiencia sensorial con el estudio anatómico y funcional del cerebro.</p>
+<h3>Hitos históricos</h3>
+<div class="timeline">
+<div class="event"><strong><span class="year">Siglo XIX</span> Bases experimentales</strong><p>El estudio de la sensación y la percepción comienza a apoyarse cada vez más en mediciones cuantitativas y experimentos controlados.</p></div>
+<div class="event"><strong><span class="year">1834–1896</span> Ernst Heinrich Weber</strong><p>Investigó la sensibilidad táctil y la discriminación de pesos. Su trabajo permitió describir que la diferencia perceptible entre dos estímulos depende de la magnitud del estímulo inicial.</p></div>
+<div class="event"><strong><span class="year">1860</span> Gustav Theodor Fechner</strong><p>Publicó <i>Elemente der Psychophysik</i>, obra fundamental de la psicofísica. Formalizó métodos para estudiar cuantitativamente la relación entre estímulos físicos y sensaciones.</p></div>
+<div class="event"><strong><span class="year">1879</span> Wilhelm Wundt</strong><p>Estableció en Leipzig un laboratorio dedicado a la investigación experimental de los procesos psicológicos, considerado un hito en la consolidación de la psicología experimental.</p></div>
+<div class="event"><strong><span class="year">1929</span> Electroencefalografía (EEG)</strong><p>Hans Berger publicó sus investigaciones sobre el registro de la actividad eléctrica cerebral mediante electrodos colocados en el cuero cabelludo.</p></div>
+<div class="event"><strong><span class="year">Décadas de 1970–1980</span> Tomografía por emisión de positrones (TEP)</strong><p>La TEP se desarrolló como técnica de imagen funcional que utiliza trazadores radiactivos para estudiar procesos metabólicos y fisiológicos en tejidos, incluido el cerebro.</p></div>
+<div class="event"><strong><span class="year">Décadas de 1990 en adelante</span> Resonancia magnética funcional (IRMF)</strong><p>La IRMF permitió estudiar cambios hemodinámicos asociados con la actividad cerebral, especialmente mediante la señal dependiente del nivel de oxígeno en sangre (BOLD).</p></div>
+</div>
+<h3>Aportaciones de los principales autores</h3>
+<div class="grid2">
+<div class="panel"><h3>Ernst H. Weber</h3><p>Estudió la sensibilidad y la capacidad para distinguir estímulos. La <b>ley de Weber</b> describe que la diferencia apenas perceptible tiende a guardar una proporción relativamente constante con la intensidad inicial del estímulo, dentro de ciertos rangos.</p><span class="tag">Sensación</span><span class="tag">Discriminación</span></div>
+<div class="panel"><h3>Gustav T. Fechner</h3><p>Fundó la psicofísica como campo cuantitativo. Propuso una relación logarítmica entre la intensidad física del estímulo y la magnitud de la sensación, bajo condiciones específicas.</p><span class="tag">Psicofísica</span><span class="tag">Medición</span></div>
+<div class="panel"><h3>Wilhelm Wundt</h3><p>Impulsó el estudio experimental de la experiencia consciente y la formación de laboratorios de psicología. Su trabajo ayudó a establecer métodos sistemáticos de investigación psicológica.</p><span class="tag">Psicología experimental</span><span class="tag">Laboratorio</span></div>
+<div class="panel"><h3>De la anatomía a la función</h3><p>Los métodos anatómicos describen estructuras mediante disección, histología y tinciones. Las técnicas modernas permiten observar actividad eléctrica, metabolismo o cambios funcionales en el cerebro vivo.</p><span class="tag">Estructura</span><span class="tag">Función</span></div>
+</div>
+<h3>Comparación de métodos</h3>
+<table class="compare"><thead><tr><th>Método</th><th>Qué permite estudiar</th><th>Característica principal</th><th>Limitación</th></tr></thead><tbody>
+<tr><td>Disección e histología</td><td>Estructuras, tejidos y células nerviosas.</td><td>Observación anatómica directa o microscópica.</td><td>Generalmente requiere tejido obtenido fuera del organismo vivo.</td></tr>
+<tr><td>EEG</td><td>Actividad eléctrica cerebral.</td><td>Gran resolución temporal; registra cambios en milisegundos.</td><td>Localizar con precisión el origen profundo de la señal es difícil.</td></tr>
+<tr><td>TEP</td><td>Metabolismo, flujo o procesos moleculares según el trazador.</td><td>Imagen funcional con radiofármacos.</td><td>Implica exposición a radiación y menor resolución temporal que EEG.</td></tr>
+<tr><td>IRMF</td><td>Cambios hemodinámicos asociados con actividad neuronal.</td><td>Buena resolución espacial y sin radiación ionizante.</td><td>La señal BOLD es indirecta y más lenta que la actividad neuronal.</td></tr>
+</tbody></table>
+<div class="callout"><b>Idea clave:</b> ningún método explica por sí solo toda la actividad cerebral. La combinación de técnicas anatómicas y funcionales permite relacionar la organización del sistema nervioso con sus procesos fisiológicos y conductuales.</div>
+</div></section>
+
+<section class="content" id="actividad2"><div class="wrap">
+<div class="kicker">Actividad 2 · 25%</div><h2 class="section-title">Infografía comparativa: bases físico-químicas</h2>
+<p class="lead">La vida depende de reacciones químicas organizadas. Las moléculas orgánicas forman estructuras celulares, almacenan energía, regulan procesos y permiten la comunicación entre las células.</p>
+<h3>Compuestos orgánicos esenciales</h3>
+<div class="grid2">
+<div class="panel"><h3>Carbohidratos</h3><p>Son una fuente importante de energía. La glucosa, por ejemplo, se utiliza en la respiración celular para producir ATP, molécula que almacena energía utilizable por la célula.</p><span class="tag">Energía</span><span class="tag">Glucosa</span></div>
+<div class="panel"><h3>Lípidos</h3><p>Forman parte de las membranas celulares, almacenan energía y participan en la señalización. Los fosfolípidos forman una bicapa que separa el interior celular del medio externo.</p><span class="tag">Membranas</span><span class="tag">Reserva energética</span></div>
+<div class="panel"><h3>Proteínas</h3><p>Desempeñan funciones estructurales, de transporte, defensa y regulación. Muchas enzimas son proteínas que aceleran reacciones químicas; los canales y bombas de membrana también son proteínas.</p><span class="tag">Enzimas</span><span class="tag">Transporte</span></div>
+<div class="panel"><h3>Ácidos nucleicos</h3><p>El ADN almacena información genética y el ARN participa en su expresión. Esta información orienta la síntesis de proteínas necesarias para el funcionamiento celular.</p><span class="tag">ADN</span><span class="tag">ARN</span></div>
+</div>
+<h3>¿Cómo se relaciona la bioquímica con la vida celular?</h3>
+<div class="steps">
+<div class="step"><b>1. Obtención de energía</b><p>Los nutrientes se transforman mediante rutas metabólicas. La célula produce ATP para sostener sus actividades.</p></div>
+<div class="step"><b>2. Construcción y reparación</b><p>Las células sintetizan proteínas, lípidos y otras moléculas para crecer, renovarse y mantener sus estructuras.</p></div>
+<div class="step"><b>3. Comunicación y regulación</b><p>Receptores, enzimas e iones participan en señales que coordinan las respuestas celulares.</p></div>
+</div>
+<h3>Potencial de membrana</h3>
+<p>El potencial de membrana es la diferencia de voltaje entre el interior y el exterior de una célula. Se origina por la distribución desigual de iones —como sodio (Na⁺), potasio (K⁺) y cloruro (Cl⁻)— y por la permeabilidad selectiva de la membrana. En muchas neuronas, el potencial de reposo se encuentra cerca de −70 mV, aunque varía según el tipo celular y las condiciones.</p>
+<div class="diagram">
+<b>Representación simplificada de la membrana neuronal</b>
+<div class="membrane"><span class="ion">Na⁺</span><span class="ion">Na⁺</span><span class="ion">Cl⁻</span><div class="membrane-line"></div><span class="ion">K⁺</span><span class="ion">K⁺</span><span class="ion">A⁻</span></div>
+<p class="small">Esquema conceptual: la distribución de iones y la permeabilidad de la membrana contribuyen al voltaje transmembrana. No representa cantidades exactas.</p>
+</div>
+<h3>¿Qué ocurre durante una estimulación eléctrica?</h3>
+<ol>
+<li><b>Reposo:</b> la neurona mantiene una diferencia de potencial entre el interior y el exterior.</li>
+<li><b>Despolarización:</b> si un estímulo alcanza el umbral, se abren canales de sodio dependientes de voltaje y entra Na⁺.</li>
+<li><b>Repolarización:</b> los canales de sodio se inactivan y se abren canales de potasio; la salida de K⁺ contribuye a recuperar el voltaje.</li>
+<li><b>Recuperación:</b> la membrana retorna a sus condiciones de reposo mediante la acción de canales y transportadores, incluida la bomba sodio-potasio.</li>
+</ol>
+<div class="callout"><b>Ejemplo:</b> cuando una persona toca accidentalmente una superficie muy caliente, los receptores sensoriales transforman el estímulo en señales nerviosas. Los potenciales de acción permiten transmitir información hacia el sistema nervioso, que coordina una respuesta rápida de retirada.</div>
+</div></section>
+
+<section class="content" id="actividad3"><div class="wrap">
+<div class="kicker">Actividad 3 · 20%</div><h2 class="section-title">Glosario ilustrado de neuroanatomía básica</h2>
+<p class="lead">Los términos topográficos permiten describir la ubicación y las relaciones entre las estructuras del sistema nervioso. Las referencias se interpretan considerando la orientación anatómica del encéfalo y del cuerpo.</p>
+<div class="axis"><b>Planos anatómicos principales</b>
+<svg viewBox="0 0 720 210" role="img" aria-label="Esquema de planos sagital, coronal y horizontal">
+<g transform="translate(15,10)"><path d="M70 40 Q110 10 150 40 L145 125 Q110 155 75 125Z" fill="#dce8f0" stroke="#315b7d" stroke-width="2"/><path d="M110 25 L110 140" stroke="#c6a66b" stroke-width="5"/><text x="110" y="175" text-anchor="middle" font-size="15" fill="#243244">Sagital</text><text x="110" y="194" text-anchor="middle" font-size="11" fill="#687789">Divide derecha / izquierda</text></g>
+<g transform="translate(250,10)"><path d="M70 40 Q110 10 150 40 L145 125 Q110 155 75 125Z" fill="#dce8f0" stroke="#315b7d" stroke-width="2"/><path d="M70 82 L150 82" stroke="#c6a66b" stroke-width="5"/><text x="110" y="175" text-anchor="middle" font-size="15" fill="#243244">Coronal</text><text x="110" y="194" text-anchor="middle" font-size="11" fill="#687789">Divide anterior / posterior</text></g>
+<g transform="translate(485,10)"><path d="M70 40 Q110 10 150 40 L145 125 Q110 155 75 125Z" fill="#dce8f0" stroke="#315b7d" stroke-width="2"/><path d="M65 85 Q110 65 155 85" stroke="#c6a66b" stroke-width="5" fill="none"/><text x="110" y="175" text-anchor="middle" font-size="15" fill="#243244">Horizontal</text><text x="110" y="194" text-anchor="middle" font-size="11" fill="#687789">Divide superior / inferior</text></g>
+</svg></div>
+<div class="term-grid">
+<div class="term"><h4>1. Dorsal</h4><p>En el encéfalo, indica una dirección hacia la parte superior; en la médula espinal, hacia la parte posterior.</p></div>
+<div class="term"><h4>2. Ventral</h4><p>En el encéfalo, indica hacia la parte inferior; en la médula espinal, hacia la parte anterior.</p></div>
+<div class="term"><h4>3. Rostral</h4><p>Dirección hacia la región de la nariz o la parte anterior del encéfalo.</p></div>
+<div class="term"><h4>4. Caudal</h4><p>Dirección hacia la parte posterior del encéfalo o hacia la región inferior, en dirección a la médula espinal.</p></div>
+<div class="term"><h4>5. Medial</h4><p>Ubicación cercana a la línea media que divide el cuerpo en mitades derecha e izquierda.</p></div>
+<div class="term"><h4>6. Lateral</h4><p>Ubicación alejada de la línea media, hacia los lados del cuerpo o del encéfalo.</p></div>
+<div class="term"><h4>7. Ipsilateral</h4><p>Se refiere a estructuras o respuestas que se encuentran o suceden en el mismo lado del cuerpo.</p></div>
+<div class="term"><h4>8. Contralateral</h4><p>Se refiere a estructuras o respuestas que se encuentran o suceden en lados opuestos del cuerpo.</p></div>
+<div class="term"><h4>9. Plano sagital</h4><p>Plano vertical que divide el cuerpo o el encéfalo en porciones derecha e izquierda. El plano medio sagital produce mitades iguales.</p></div>
+<div class="term"><h4>10. Plano coronal o frontal</h4><p>Plano vertical que divide el cuerpo o el encéfalo en porciones anterior y posterior.</p></div>
+<div class="term"><h4>11. Plano horizontal o axial</h4><p>Plano que divide el cuerpo o el encéfalo en porciones superior e inferior.</p></div>
+<div class="term"><h4>12. Proximal y distal</h4><p>Proximal indica cercanía al punto de origen o unión; distal indica mayor distancia respecto a ese punto. Se usan especialmente para las extremidades.</p></div>
+</div>
+<div class="callout"><b>Nota anatómica:</b> la orientación dorsal y ventral cambia de referencia entre el encéfalo y la médula espinal debido a la curvatura del neuroeje. Por eso es importante interpretar estos términos dentro de su contexto.</div>
+</div></section>
+
+<section class="content" id="actividad4"><div class="wrap">
+<div class="kicker">Actividad 4 · 30%</div><h2 class="section-title">Ensayo reflexivo: neuroquímica, neurotransmisores y homeostasis</h2>
+<p class="lead">La comunicación química del sistema nervioso influye en el movimiento, la atención, el estado de ánimo y la regulación de funciones esenciales para la vida.</p>
+<article class="essay">
+<h3>Introducción</h3>
+<p>El sistema nervioso coordina gran parte de las funciones del organismo mediante señales eléctricas y químicas. Las neuronas se comunican entre sí y con otras células a través de sustancias llamadas neurotransmisores, que se liberan en las sinapsis y se unen a receptores específicos. Esta comunicación no ocurre de manera aislada: se relaciona con el metabolismo, la actividad de distintos órganos y los mecanismos que mantienen la homeostasis.</p>
+<p>Entre los numerosos neurotransmisores que participan en estos procesos se encuentran la acetilcolina y la serotonina. Aunque tienen funciones diferentes, ambos muestran cómo la actividad química del cerebro contribuye a regular la conducta y el equilibrio fisiológico.</p>
+<h3>Acetilcolina: movimiento, atención y memoria</h3>
+<p>La acetilcolina es un neurotransmisor que participa en la comunicación entre neuronas y en la transmisión de señales desde las neuronas motoras hacia los músculos esqueléticos. En la unión neuromuscular, su liberación permite activar receptores que desencadenan la contracción muscular. Por ello, es indispensable para realizar movimientos voluntarios.</p>
+<p>También participa en funciones del sistema nervioso autónomo y en procesos cognitivos como la atención y ciertos aspectos del aprendizaje y la memoria. En el cerebro, diferentes vías colinérgicas contribuyen a modular la actividad neuronal. Su efecto depende del tipo de receptor y de la región donde actúa.</p>
+<p>La acetilcolina se sintetiza a partir de colina y acetil-CoA mediante la enzima colina acetiltransferasa. Después de ser liberada, puede ser degradada por la enzima acetilcolinesterasa. Este proceso permite terminar la señal y recuperar componentes para nuevas síntesis. La disponibilidad de sus precursores y el funcionamiento metabólico celular influyen en la comunicación colinérgica.</p>
+<h3>Serotonina: regulación del estado de ánimo y otras funciones</h3>
+<p>La serotonina, también conocida como 5-hidroxitriptamina o 5-HT, es un neurotransmisor sintetizado a partir del aminoácido triptófano. Sus neuronas se localizan principalmente en núcleos del rafe del tronco encefálico y proyectan hacia diversas regiones del sistema nervioso central.</p>
+<p>La serotonina participa en la modulación del estado de ánimo, el sueño, el apetito, la percepción del dolor y otros procesos. No funciona como un simple “interruptor de la felicidad”: sus efectos son complejos y dependen de los receptores involucrados, las áreas cerebrales y el contexto fisiológico. Además, una gran parte de la serotonina del organismo se encuentra en el sistema digestivo, donde cumple funciones periféricas.</p>
+<p>Su relación con el metabolismo se observa desde su síntesis, que requiere triptófano y enzimas específicas. La disponibilidad de nutrientes, el funcionamiento celular y la regulación de sus receptores y transportadores forman parte de un sistema dinámico que contribuye al equilibrio del organismo.</p>
+<h3>Neurotransmisores y homeostasis</h3>
+<p>La homeostasis es la capacidad del organismo para mantener condiciones internas relativamente estables frente a cambios del ambiente. La temperatura, la glucosa sanguínea, la presión arterial, el balance de agua y electrolitos son ejemplos de variables que requieren regulación constante.</p>
+<p>El sistema nervioso participa en esta regulación mediante circuitos que reciben información, la integran y coordinan respuestas. Los neurotransmisores permiten que las neuronas transmitan y modulen esas señales. La acetilcolina interviene, por ejemplo, en funciones parasimpáticas que favorecen procesos como la digestión y la disminución de la frecuencia cardiaca. La serotonina también participa en circuitos que influyen en el apetito, el sueño y otras conductas relacionadas con el equilibrio interno.</p>
+<p>Es importante comprender que la homeostasis no depende de una sola sustancia. Se construye mediante la interacción del sistema nervioso, el sistema endocrino, los órganos y los mecanismos de retroalimentación. Los neurotransmisores son parte de una red compleja de regulación.</p>
+<h3>¿Cómo pueden influir los desequilibrios neuroquímicos en el comportamiento?</h3>
+<p>Las alteraciones en la síntesis, liberación, recepción o eliminación de neurotransmisores pueden modificar la comunicación neuronal. En consecuencia, pueden influir en procesos como el movimiento, la atención, el sueño, el apetito y la regulación emocional. Por ejemplo, la pérdida de neuronas que producen acetilcolina en ciertas regiones cerebrales se ha relacionado con alteraciones cognitivas observadas en enfermedades neurodegenerativas. Por otro lado, los sistemas serotoninérgicos se han estudiado ampliamente por su participación en trastornos del estado de ánimo y en la regulación de diversas funciones.</p>
+<p>Sin embargo, sería incorrecto explicar una conducta o un trastorno psicológico únicamente por la cantidad de un neurotransmisor. El comportamiento humano surge de la interacción entre factores biológicos, psicológicos, sociales y ambientales. También intervienen la genética, las experiencias, el aprendizaje, el estrés, la salud general y las relaciones interpersonales. Por eso, hablar de un “desequilibrio químico” como causa única suele simplificar demasiado fenómenos que son multifactoriales.</p>
+<h3>Reflexión personal</h3>
+<p>Considero que estudiar la neuroquímica permite comprender que nuestras acciones, emociones y pensamientos tienen una base biológica, pero eso no significa que las personas estén determinadas por su química cerebral. La acetilcolina y la serotonina muestran que una misma sustancia puede participar en diferentes funciones dependiendo del circuito en el que actúe. También permiten reconocer la importancia del metabolismo y de la comunicación entre los sistemas del cuerpo.</p>
+<p>Desde la psicología, este conocimiento es valioso porque ayuda a observar al ser humano de una manera integral. Una dificultad en la atención, el sueño o el estado de ánimo no debe interpretarse de forma apresurada ni atribuirse a una sola causa. Es necesario considerar las condiciones de vida, la historia personal, el ambiente y, cuando corresponde, la evaluación de profesionales de la salud.</p>
+<h3>Conclusión</h3>
+<p>La acetilcolina y la serotonina son ejemplos de cómo los neurotransmisores participan en la comunicación neuronal y en la regulación de funciones esenciales. Su síntesis y actividad se relacionan con procesos metabólicos, mientras que sus efectos contribuyen al movimiento, la cognición, el estado de ánimo y la homeostasis. Comprender estos mecanismos permite reconocer la conexión entre cerebro y organismo, así como la complejidad del comportamiento humano. La neuroquímica ofrece una explicación fundamental, pero debe integrarse con las dimensiones psicológicas y sociales para comprender a la persona en su totalidad.</p>
+</article>
+</div></section>
+
+<section class="content" id="referencias"><div class="wrap">
+<div class="kicker">Fuentes de consulta</div><h2 class="section-title">Referencias bibliográficas</h2>
+<p class="lead">Bibliografía académica de apoyo para los conceptos históricos, neuroanatómicos, fisiológicos y neuroquímicos presentados en el portafolio.</p>
+<ol class="refs">
+<li>Bear, M. F., Connors, B. W., &amp; Paradiso, M. A. (2020). <i>Neuroscience: Exploring the Brain</i> (4th ed.). Jones &amp; Bartlett Learning.</li>
+<li>Fechner, G. T. (1860). <i>Elemente der Psychophysik</i>. Breitkopf und Härtel.</li>
+<li>Hall, J. E., &amp; Hall, M. E. (2021). <i>Guyton and Hall Textbook of Medical Physiology</i> (14th ed.). Elsevier.</li>
+<li>Kandel, E. R., Koester, J. D., Mack, S. H., &amp; Siegelbaum, S. A. (2021). <i>Principles of Neural Science</i> (6th ed.). McGraw Hill.</li>
+<li>Purves, D., Augustine, G. J., Fitzpatrick, D., et al. (2018). <i>Neuroscience</i> (6th ed.). Oxford University Press.</li>
+<li>Wundt, W. (1874). <i>Grundzüge der physiologischen Psychologie</i>. Wilhelm Engelmann.</li>
+<li>Weber, E. H. (1834). <i>De pulsu, resorptione, auditu et tactu</i>. Koehler.</li>
+</ol>
+<div class="callout"><b>Recomendación antes de entregar:</b> verifica que los datos de portada estén completos y que las referencias correspondan a las ediciones que consultaste. Si tu profesora proporcionó lecturas específicas, agrégalas también.</div>
+<p class="small">Documento elaborado como portafolio académico. Los esquemas son representaciones didácticas simplificadas y no sustituyen diagramas anatómicos especializados.</p>
+</div></section>
+</main>
+<footer><div>PSICOLOGÍA FISIOLÓGICA · PORTAFOLIO ACADÉMICO</div><div>El estudio del sistema nervioso como puente entre el organismo y la conducta.</div></footer>
+<script>
+const btn=document.getElementById('menuBtn'),links=document.getElementById('navlinks');
+btn.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const sections=[...document.querySelectorAll('main section[id]')];
+const navLinks=[...document.querySelectorAll('.navlinks a')];
+window.addEventListener('scroll',()=>{let current='inicio';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-130)current=s.id});navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))});
+</script>
+</body></html>
