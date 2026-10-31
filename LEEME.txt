@@ -2,10 +2,7 @@ PORTAFOLIO DE PSICOLOGÍA FISIOLÓGICA
 
 1. Descomprime el archivo ZIP.
 2. Abre index.html con Chrome, Edge o Firefox.
-3. La portada ya está personalizada para David Ernesto González Tovar.
-4. Para generar el PDF: pulsa "Imprimir / Guardar como PDF" y selecciona "Guardar como PDF".
+3. Para generar el PDF: pulsa "Imprimir / Guardar como PDF" y selecciona "Guardar como PDF".
 
 La página funciona localmente y se adapta a computadora y celular.
-Para publicarla con un enlace, puedes subir la carpeta a GitHub Pages, Netlify o Vercel.
 
-IMPORTANTE: revisa el contenido, las referencias y los datos de portada antes de entregar.
